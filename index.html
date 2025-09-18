@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tableau d'idées</title>
+ <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="toolbar">
+    <div class="toolbar-row">
+      <button id="addNote">Ajouter une note</button>
+      <button id="deleteNote">Supprimer la sélection</button>
+      <select id="tagFilter">
+        <option value="all">Afficher tout</option>
+      </select>
+    </div>
+    <div class="toolbar-row">
+      <input type="text" id="newTagInput" placeholder="Nom du nouveau tag" />
+      <button id="createTag">Créer un tag</button>
+      <select id="tagDeleteSelect"></select>
+      <button id="deleteTag">Supprimer le tag</button>
+    </div>
+  </div>
+
+  <div id="board"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
