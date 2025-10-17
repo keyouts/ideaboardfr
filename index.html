@@ -4,26 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tableau d'idées</title>
- <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="toolbar">
-    <div class="toolbar-row">
-      <button id="addNote">Ajouter une note</button>
-      <button id="deleteNote">Supprimer la sélection</button>
-      <select id="tagFilter">
+  <div class="toolbar" role="region" aria-label="Barre d'outils">
+    <div class="toolbar-row" role="group" aria-label="Gestion des notes">
+      <button id="addNote" aria-label="Ajouter une nouvelle note">Ajouter une note</button>
+      <button id="deleteNote" aria-label="Supprimer les notes sélectionnées">Supprimer la sélection</button>
+      <label for="tagFilter" class="visually-hidden">Filtrer par tag</label>
+      <select id="tagFilter" aria-label="Filtrer les notes par tag">
         <option value="all">Afficher tout</option>
       </select>
     </div>
-    <div class="toolbar-row">
-      <input type="text" id="newTagInput" placeholder="Nom du nouveau tag" />
-      <button id="createTag">Créer un tag</button>
-      <select id="tagDeleteSelect"></select>
-      <button id="deleteTag">Supprimer le tag</button>
+    <div class="toolbar-row" role="group" aria-label="Gestion des tags">
+      <label for="newTagInput" class="visually-hidden">Nom du nouveau tag</label>
+      <input type="text" id="newTagInput" placeholder="Nom du nouveau tag" aria-label="Nom du nouveau tag" />
+      <button id="createTag" aria-label="Créer un nouveau tag">Créer un tag</button>
+      <label for="tagDeleteSelect" class="visually-hidden">Sélectionner un tag à supprimer</label>
+      <select id="tagDeleteSelect" aria-label="Sélectionner un tag à supprimer"></select>
+      <button id="deleteTag" aria-label="Supprimer le tag sélectionné">Supprimer le tag</button>
     </div>
   </div>
 
-  <div id="board"></div>
+  <div id="board" role="main" aria-label="Tableau des idées"></div>
 
   <script src="script.js"></script>
 </body>
